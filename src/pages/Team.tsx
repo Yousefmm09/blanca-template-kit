@@ -5,18 +5,38 @@ import { Shield } from "lucide-react";
 
 const Team = () => {
   const players = [
-    { name: "Player One", number: 1, position: "Goalkeeper" },
-    { name: "Player Two", number: 2, position: "Defender" },
-    { name: "Player Three", number: 3, position: "Defender" },
-    { name: "Player Four", number: 4, position: "Defender" },
-    { name: "Player Five", number: 5, position: "Defender" },
-    { name: "Player Six", number: 6, position: "Midfielder" },
-    { name: "Player Seven", number: 7, position: "Forward" },
-    { name: "Player Eight", number: 8, position: "Midfielder" },
-    { name: "Player Nine", number: 9, position: "Forward" },
-    { name: "Player Ten", number: 10, position: "Midfielder" },
-    { name: "Player Eleven", number: 11, position: "Forward" },
-    { name: "Player Twelve", number: 12, position: "Midfielder" },
+    // Goalkeepers
+    { name: "Thibaut Courtois", number: 1, position: "Goalkeeper" },
+    { name: "Andriy Lunin", number: 13, position: "Goalkeeper" },
+    { name: "Kepa Arrizabalaga", number: 25, position: "Goalkeeper" },
+    
+    // Defenders
+    { name: "Dani Carvajal", number: 2, position: "Defender" },
+    { name: "Éder Militão", number: 3, position: "Defender" },
+    { name: "David Alaba", number: 4, position: "Defender" },
+    { name: "Jesús Vallejo", number: 5, position: "Defender" },
+    { name: "Nacho Fernández", number: 6, position: "Defender" },
+    { name: "Antonio Rüdiger", number: 22, position: "Defender" },
+    { name: "Ferland Mendy", number: 23, position: "Defender" },
+    { name: "Fran García", number: 20, position: "Defender" },
+    
+    // Midfielders
+    { name: "Luka Modrić", number: 10, position: "Midfielder" },
+    { name: "Toni Kroos", number: 8, position: "Midfielder" },
+    { name: "Federico Valverde", number: 15, position: "Midfielder" },
+    { name: "Eduardo Camavinga", number: 12, position: "Midfielder" },
+    { name: "Aurélien Tchouaméni", number: 18, position: "Midfielder" },
+    { name: "Jude Bellingham", number: 5, position: "Midfielder" },
+    { name: "Dani Ceballos", number: 19, position: "Midfielder" },
+    { name: "Brahim Díaz", number: 21, position: "Midfielder" },
+    { name: "Arda Güler", number: 24, position: "Midfielder" },
+    
+    // Forwards
+    { name: "Vinícius Júnior", number: 7, position: "Forward" },
+    { name: "Rodrygo Goes", number: 11, position: "Forward" },
+    { name: "Joselu", number: 14, position: "Forward" },
+    { name: "Kylian Mbappé", number: 9, position: "Forward" },
+    { name: "Endrick", number: 16, position: "Forward" },
   ];
 
   const positions = ["All", "Goalkeeper", "Defender", "Midfielder", "Forward"];
@@ -86,10 +106,10 @@ const Team = () => {
           <h2 className="text-3xl font-bold mb-8">Coaching Staff</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
-              { name: "Head Coach", role: "Manager" },
-              { name: "Assistant Coach", role: "Assistant" },
-              { name: "Fitness Coach", role: "Physical Trainer" },
-              { name: "Goalkeeping Coach", role: "GK Coach" },
+              { name: "Carlo Ancelotti", role: "Manager" },
+              { name: "Davide Ancelotti", role: "Assistant Coach" },
+              { name: "Antonio Pintus", role: "Physical Trainer" },
+              { name: "Luis Llopis", role: "GK Coach" },
             ].map((staff, i) => (
               <Card key={i} className="p-6 text-center">
                 <div className="w-24 h-24 mx-auto mb-4 rounded-full bg-gradient-to-br from-navy to-navy-light"></div>
