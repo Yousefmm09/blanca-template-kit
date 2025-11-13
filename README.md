@@ -1,73 +1,228 @@
-# Welcome to your Lovable project
+# Real Madrid Inspired Website Template
 
-## Project info
+## ⚠️ IMPORTANT LEGAL NOTICE
 
-**URL**: https://lovable.dev/projects/f371caa6-a5ee-45fe-acfd-d3660301a914
+**This template is inspired by the visual structure of the official Real Madrid website for educational and development purposes only.**
 
-## How can I edit this code?
+- Do NOT use trademarked logos, copyrighted photography, or proprietary content in production without proper permission.
+- Replace all placeholder images and content with licensed assets prior to any public deployment.
+- This is a front-end template demonstrating layout and design patterns only.
+- All Real Madrid trademarks, logos, and copyrighted materials belong to Real Madrid C.F.
 
-There are several ways of editing your application.
+## 🎯 Project Overview
 
-**Use Lovable**
+A modern, responsive web template inspired by Real Madrid's official website structure. Built with React, TypeScript, Tailwind CSS, and Vite for optimal performance.
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/f371caa6-a5ee-45fe-acfd-d3660301a914) and start prompting.
+**Features:**
+- ✅ Fully responsive design (mobile-first approach)
+- ✅ Semantic HTML5 structure
+- ✅ Accessible navigation with ARIA support
+- ✅ Multiple pages: Home, Team, Schedule, News, Shop, Bernabéu
+- ✅ Professional sports website aesthetics
+- ✅ Modern component architecture
 
-Changes made via Lovable will be committed automatically to this repo.
+## 📁 Project Structure
 
-**Use your preferred IDE**
+```
+src/
+├── components/
+│   ├── Layout.tsx          # Main layout with header & footer
+│   └── ui/                 # Reusable UI components (shadcn)
+├── pages/
+│   ├── Index.tsx           # Homepage with hero, stats, news
+│   ├── Team.tsx            # Squad roster with filters
+│   ├── Schedule.tsx        # Fixtures and results
+│   ├── News.tsx            # News listing
+│   ├── Article.tsx         # Single article template
+│   ├── Shop.tsx            # Store landing page
+│   └── Bernabeu.tsx        # Stadium tour information
+├── index.css               # Design system & CSS variables
+└── App.tsx                 # Main app with routing
+```
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+## 🚀 Getting Started
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+### Prerequisites
+- Node.js (v16 or higher)
+- npm or yarn
 
-Follow these steps:
+### Installation
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+1. Clone the repository:
+```bash
+git clone <your-repo-url>
+cd <project-directory>
+```
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+2. Install dependencies:
+```bash
+npm install
+```
 
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
+3. Start the development server:
+```bash
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+4. Open your browser to `http://localhost:8080`
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+## 🎨 Design System
 
-**Use GitHub Codespaces**
+The template uses a comprehensive design system defined in `src/index.css`:
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+### Color Palette
+- **Primary (Navy)**: `hsl(220, 25%, 12%)` - Main brand color
+- **Gold Accent**: `hsl(45, 100%, 50%)` - Accent color for CTAs
+- **Background**: `hsl(0, 0%, 100%)` - Clean white background
+- **Secondary**: `hsl(220, 15%, 96%)` - Light gray for sections
 
-## What technologies are used for this project?
+### Typography
+- Font family: System fonts with fallbacks
+- Heading scales from text-xl to text-6xl
+- Professional, clean typography
 
-This project is built with:
+### Spacing Scale
+Consistent spacing using CSS variables:
+- `--spacing-xs` to `--spacing-3xl`
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+## 📄 Pages Overview
 
-## How can I deploy this project?
+### Homepage (`/`)
+- Hero section with call-to-action
+- Statistics showcase (trophies, fans, etc.)
+- Next match card with match details
+- Latest news grid
+- Shop promotion section
 
-Simply open [Lovable](https://lovable.dev/projects/f371caa6-a5ee-45fe-acfd-d3660301a914) and click on Share -> Publish.
+### First Team (`/team`)
+- Squad header with filters by position
+- Player cards grid with placeholder images
+- Coaching staff section
 
-## Can I connect a custom domain to my Lovable project?
+### Schedule (`/schedule`)
+- Fixtures and results list
+- Competition filters
+- Match cards with venue and time details
+- Buy tickets CTAs
 
-Yes, you can!
+### News (`/news`)
+- Featured article section
+- News grid with category filters
+- Article cards with timestamps
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+### Article (`/news/article`)
+- Full article layout
+- Share buttons
+- Related articles section
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+### Shop (`/shop`)
+- Product grid with categories
+- Product cards with pricing
+- Featured banner
+- Store information
+
+### Bernabéu (`/bernabeu`)
+- Stadium hero section
+- Tour information
+- Pricing and schedules
+- Booking options
+
+## 🔧 Customization Guide
+
+### Replacing Placeholder Content
+
+1. **Images**: Replace placeholder backgrounds in components with real images
+   - Store images in `public/images/` or use external URLs
+   - Update background URLs in JSX
+
+2. **Text Content**: Update all lorem ipsum and placeholder text
+   - Player names in `Team.tsx`
+   - News articles in `News.tsx` and `Article.tsx`
+   - Match details in `Schedule.tsx`
+
+3. **Colors**: Modify the design system in `src/index.css`
+   - Update HSL values in `:root` CSS variables
+   - Colors automatically apply throughout the app
+
+4. **Branding**: Add your logo
+   - Replace the "RM" placeholder in `Layout.tsx`
+   - Add logo image to `public/` folder
+
+### Adding New Pages
+
+1. Create new component in `src/pages/`
+2. Add route in `src/App.tsx`
+3. Add navigation link in `src/components/Layout.tsx`
+
+## 🛠️ Built With
+
+- **React 18** - UI library
+- **TypeScript** - Type safety
+- **Tailwind CSS** - Utility-first styling
+- **Vite** - Build tool
+- **React Router** - Client-side routing
+- **shadcn/ui** - Component library
+- **Lucide React** - Icon library
+
+## 📦 Production Build
+
+Create an optimized production build:
+
+```bash
+npm run build
+```
+
+Preview the production build:
+```bash
+npm run preview
+```
+
+## ✅ Production Readiness Checklist
+
+Before deploying to production:
+
+- [ ] Replace all placeholder images with licensed assets
+- [ ] Update all text content with real information
+- [ ] Add proper meta tags for SEO (title, description, OG tags)
+- [ ] Optimize images (compress, use WebP format)
+- [ ] Test responsive design on real devices
+- [ ] Add analytics tracking (Google Analytics, etc.)
+- [ ] Configure CDN for static assets
+- [ ] Add proper error boundaries
+- [ ] Implement loading states
+- [ ] Set up proper environment variables
+- [ ] Add 404 page handling
+- [ ] Test accessibility (screen readers, keyboard navigation)
+- [ ] Ensure WCAG 2.1 compliance
+
+## 📚 Reference Links
+
+This template's layout was inspired by the following pages (for reference only):
+- https://www.realmadrid.com/ (homepage)
+- https://www.realmadrid.com/en-US/football/first-team (first team)
+- https://www.realmadrid.com/en-US/schedule (schedule)
+
+**Note**: These links are provided for structural reference only. Do not copy copyrighted content from these pages.
+
+## 🤝 Contributing
+
+This is an educational template. Feel free to:
+- Report issues
+- Suggest improvements
+- Submit pull requests
+- Fork for your own projects
+
+## 📝 License
+
+This template is provided for educational purposes. All Real Madrid trademarks and copyrights belong to their respective owners.
+
+## 🔗 Resources
+
+- [React Documentation](https://react.dev/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [Vite Documentation](https://vitejs.dev/)
+- [shadcn/ui](https://ui.shadcn.com/)
+
+---
+
+**Created for educational purposes** | Not affiliated with Real Madrid C.F.
